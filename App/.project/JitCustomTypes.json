@@ -1,6 +1,6 @@
 {
   "version": "3.0.0.0",
-  "bundleHash": "QJgjzVXM9AHi32EQTCWSkDizoO1YOfjjCbIA4JAT0rw",
+  "bundleHash": "npD7GCZOnIQPdUPbuC9fb3TcrDzSDFcZRbBSXjTQNro",
   "addedAssemblyNames": [],
   "discardedAssemblyNames": [
     "Apps.form.MainPage.g4Qqbqxe33gg",
@@ -8,12 +8,21 @@
     "Apps.form.MainPage.Expressions.FSPnp3Fd8rG1TBDA32tlorF",
     "Apps.form.MainPage.gWkAR4hi33gg",
     "Apps.form.MainPage.gbOfBHRq33gg",
-    "Apps.form.MainPage.Expressions.w9hckbuMWK1zA1rV3MXlUB1"
+    "Apps.form.MainPage.Expressions.w9hckbuMWK1zA1rV3MXlUB1",
+    "Apps.form.MainPage.gEGTiNhq33gg",
+    "Apps.form.MainPage.Expressions.VuJYO4bJtZP1HZiP41YvxbI3",
+    "Apps.form.MainPage.gYrY7ahq33gg",
+    "Apps.form.MainPage.Expressions.cu4HR4PPmrR1NMvJc3TAY8e3",
+    "Apps.form.MainPage.gYMxbBq33gg",
+    "Apps.form.MainPage.Expressions.1nWfWnztPI1dBDCL3SjaIt"
   ],
   "discardedAssemblyReplacements": {
     "Apps.form.MainPage.g4Qqbqxe33gg": "Apps.form.MainPage.goO3Prhe33gg",
     "Apps.form.MainPage.gWkAR4hi33gg": "Apps.form.MainPage.gbOfBHRq33gg",
-    "Apps.form.MainPage.gbOfBHRq33gg": "Apps.form.MainPage.gEGTiNhq33gg"
+    "Apps.form.MainPage.gbOfBHRq33gg": "Apps.form.MainPage.gEGTiNhq33gg",
+    "Apps.form.MainPage.gEGTiNhq33gg": "Apps.form.MainPage.gYrY7ahq33gg",
+    "Apps.form.MainPage.gYrY7ahq33gg": "Apps.form.MainPage.gYMxbBq33gg",
+    "Apps.form.MainPage.gYMxbBq33gg": "Apps.form.MainPage.g0rbibBq33gg"
   },
   "assembliesJitInfo": {}
 }

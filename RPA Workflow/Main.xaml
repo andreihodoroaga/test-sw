@@ -2,21 +2,26 @@
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib"
  xmlns:ui="http://schemas.uipath.com/workflow/activities"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="23">
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Activities</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections</x:String>
-      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
       <x:String>UiPath.Platform.Activities</x:String>
-      <x:String>System.Activities</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
@@ -48,6 +53,7 @@
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -79,5 +85,13 @@
         <isactr:FieldObject Name="out_code" Type="FieldArgument" />
       </isactr:ConnectorHttpActivity.FieldObjects>
     </isactr:ConnectorHttpActivity>
+    <isactr:ConnectorPersistenceActivity ConnectionId="{x:Null}" Configuration="H4sIAAAAAAAAA1WQQU8CMRCF/8ucgaAGDnsTAoZIwh4IF+Nh7I7Q7LbTtFNkQ/zvTl1i5NTM19f3XucKa0tdk5bsBa2nCNUVVmfyMnCo3t5HsPEh34FdljvyPYIluw81aNa2E4qrS4iUkmUPFUBxSILeUI0RHakglaCDnoPkYTKdTKG4eE9GOL5SrzjbgHIaO2siJ/6UMWfpmNun+UzFz0bs2Uq/7wOp+IW0vzV1MU1CmgalF5oTNVt9lMMBu0wl+Y8vIn8lihshd+N1tA5jr/m3v9ZoWjzS/66P89+yW/THrFfKyOu8p4ssOjbtsJMfVYI4TVwBAAA=" DisplayName="Wait for an Event on Microsoft Outlook 365 and Resume" sap2010:WorkflowViewState.IdRef="ConnectorPersistenceActivity_1" UiPathActivityTypeId="74ba2dbe-2bcb-3891-9001-13624fd76ced">
+      <isactr:ConnectorPersistenceActivity.FieldObjects>
+        <sco:Collection x:TypeArguments="isactr:FieldObject" />
+      </isactr:ConnectorPersistenceActivity.FieldObjects>
+      <isactr:ConnectorPersistenceActivity.InboxId>
+        <InArgument x:TypeArguments="s:Nullable(s:Guid)" />
+      </isactr:ConnectorPersistenceActivity.InboxId>
+    </isactr:ConnectorPersistenceActivity>
   </Sequence>
 </Activity>
