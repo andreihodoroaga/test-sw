@@ -1,8 +1,13 @@
 {
   "version": "3.0.0.0",
-  "bundleHash": "6Zb6M9JK7hC6SXseUMwRYXQiVpVLETl8vuVFniYcQ",
+  "bundleHash": "1Rth1qn8xu0IQloVx7yVJSl6sgMPKC9moBXVxdSeFGg",
   "addedAssemblyNames": [],
-  "discardedAssemblyNames": [],
-  "discardedAssemblyReplacements": {},
+  "discardedAssemblyNames": [
+    "Apps.form.MainPage.g4Qqbqxe33gg",
+    "Apps.form.MainPage.Expressions.j0wPwHZuHB1pLlc01rS4Kv3"
+  ],
+  "discardedAssemblyReplacements": {
+    "Apps.form.MainPage.g4Qqbqxe33gg": "Apps.form.MainPage.goO3Prhe33gg"
+  },
   "assembliesJitInfo": {}
 }

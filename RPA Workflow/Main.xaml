@@ -51,5 +51,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
     <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&quot;&quot;test&quot;&quot;&quot;]" />
+    <ui:LogMessage DisplayName="Log Message 1" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;ceva&quot;]" />
   </Sequence>
 </Activity>
