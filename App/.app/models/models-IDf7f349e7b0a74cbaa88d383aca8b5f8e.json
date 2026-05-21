@@ -1,0 +1,88 @@
+{
+  "id": "ID460f68811b664be497a5f85d67fd3aeb",
+  "dateCreated": "2026-05-21T08:56:51.365Z",
+  "dateLastOpened": "2026-05-21T08:56:51.365Z",
+  "type": "app",
+  "iconUrl": "assets/svg/expressions-editor/app-variable.svg",
+  "idCounter": 1005,
+  "ownerFqn": "",
+  "ownerId": "",
+  "createdByFqn": "",
+  "createdById": "",
+  "systemName": "IDf7f349e7b0a74cbaa88d383aca8b5f8e",
+  "categorySystemName": "j-category-apps-organization",
+  "tenantId": "uipatrcdvtwu",
+  "buildVersion": "2026.5.4-5.40.59-s192.53877e895",
+  "modelVersion": 7,
+  "currentModelVersion": 1,
+  "dllVersion": 0,
+  "modelTypesVersion": 0,
+  "ownerDisplayName": "",
+  "rootReferences": {
+    "IDb61fb937254f43b097a10bbe301ea2e1": {
+      "id": "ID1003",
+      "instances": [
+        {
+          "id": "ID1004",
+          "instanceJPath": "$.defaultForm",
+          "titleIconUrl": "assets/svg/form.svg",
+          "titlePropertyName": "title",
+          "subTitles": []
+        }
+      ],
+      "titleIconUrl": "assets/svg/form.svg",
+      "titlePropertyName": "title",
+      "type": "form"
+    }
+  },
+  "title": "App",
+  "description": "",
+  "allModelErrors": {},
+  "valueBindingMetadata": {},
+  "defaultForm": {
+    "id": "ID1005",
+    "rootType": "form",
+    "rootSystemName": "IDb61fb937254f43b097a10bbe301ea2e1",
+    "instanceJPath": "$.rootReferences.IDb61fb937254f43b097a10bbe301ea2e1.instances[?(@.id==\"ID1004\")]",
+    "objectJPath": "$",
+    "itemType": "form"
+  },
+  "appFields": [],
+  "expressionLanguage": "VB",
+  "appIcon": {
+    "id": "ID1002"
+  },
+  "cacheKey": "1779353811365",
+  "isPublic": false,
+  "theme": {
+    "id": "robottorney",
+    "type": "OOB"
+  },
+  "isExpressionEnabled": false,
+  "isSharedWithinTenant": false,
+  "collaborators": [],
+  "latestPublishedVersion": null,
+  "lastPublishedDate": null,
+  "latestPublishType": null,
+  "tenants": [],
+  "isLazyHydrationEnabled": true,
+  "datatableDeserializationDefaultingToObject": true,
+  "isAppPublic": false,
+  "appUsageType": 0,
+  "migrationFlagVersions": {
+    "vb_assembly_regen_flag_version": 1,
+    "vb_force_lazy_hydration_flag_version": 1,
+    "uts_enabled": 1
+  },
+  "isUnifiedProject": true,
+  "unifiedProjectId": "38c4e1db-9b2f-4711-9f22-c783d357242f",
+  "isLinkedToSolution": false,
+  "unifiedBuildSolutionId": "",
+  "unifiedProjectContext": {},
+  "appMetadata": {},
+  "appSettings": {},
+  "documentReferences": {},
+  "unifiedProjectType": "Process",
+  "isSWFileSystemEnabled": true,
+  "runtimeLanguage": "en"
+}

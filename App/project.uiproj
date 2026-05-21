@@ -1,0 +1,9 @@
+{
+  "Name": "App",
+  "ProjectType": "WebApp",
+  "MainFile": "Main.xaml",
+  "WebAppSettings": {
+    "AppId": "IDf7f349e7b0a74cbaa88d383aca8b5f8e",
+    "IsCoreProject": true
+  }
+}

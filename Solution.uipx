@@ -5,6 +5,16 @@
       "Id": "68f5a1b9-84e2-4515-a267-64b93673b61c",
       "Type": "Api",
       "ProjectRelativePath": "API Workflow/project.uiproj"
+    },
+    {
+      "Id": "a7d79a00-b866-4fbc-af85-35e053ed77f0",
+      "Type": "Process",
+      "ProjectRelativePath": "RPA Workflow/project.uiproj"
+    },
+    {
+      "Id": "d8706b51-8331-43be-a9d8-9bd5d14d441b",
+      "Type": "Process",
+      "ProjectRelativePath": "App/project.uiproj"
     }
   ]
 }

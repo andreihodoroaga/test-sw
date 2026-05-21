@@ -1,0 +1,61 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "App",
+    "kind": "process",
+    "type": "webApp",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "d8706b51-8331-43be-a9d8-9bd5d14d441b",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "App",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "entryPointUniqueId": null,
+      "inputArgumentsSchema": null,
+      "inputArgumentsSchemaV2": null,
+      "type": "WebApp",
+      "name": "App",
+      "description": null,
+      "package": {
+        "key": "c6f2fcbf-8daa-4be6-b9ee-ac2316eefde1"
+      },
+      "packageName": "Solution.webApp.App",
+      "packageVersion": null,
+      "entryPointName": null,
+      "inputArguments": "{}",
+      "jobPriority": "Medium",
+      "hiddenForAttendedUser": true,
+      "alwaysRunning": true,
+      "autoStartProcess": false,
+      "jobRecording": "Disabled",
+      "targetFrameworkValue": "Portable",
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
+      "robotSize": "Automatic",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "retentionBucketRef": null,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180,
+      "staleRetentionBucketRef": null,
+      "entryPoints": null,
+      "connections": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "ebce7968-6f9c-42ed-8698-13d7d6524e09"
+  }
+}

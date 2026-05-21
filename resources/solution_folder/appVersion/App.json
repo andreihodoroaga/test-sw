@@ -1,0 +1,30 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "App",
+    "kind": "appVersion",
+    "apiVersion": "apps.uipath.com/v2",
+    "projectKey": "d8706b51-8331-43be-a9d8-9bd5d14d441b",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "App",
+      "description": null,
+      "publishNote": null,
+      "version": null,
+      "projectId": null,
+      "isAppPublic": false,
+      "packageFile": null,
+      "packageKey": null
+    },
+    "locks": [],
+    "key": "cfa8ad9e-a5e8-49db-8b41-3afbe3df7490"
+  }
+}
