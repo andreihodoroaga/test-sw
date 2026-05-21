@@ -3,7 +3,6 @@
   "resource": {
     "name": "App",
     "kind": "app",
-    "type": "workflow",
     "apiVersion": "apps.uipath.com/v1",
     "projectKey": "d8706b51-8331-43be-a9d8-9bd5d14d441b",
     "isOverridable": true,
@@ -27,18 +26,18 @@
     "spec": {
       "name": "App",
       "description": null,
-      "type": "workflow",
+      "type": "Regular",
       "version": null,
       "appSystemName": null,
       "appVersionRef": {
-        "key": "cfa8ad9e-a5e8-49db-8b41-3afbe3df7490"
+        "key": "4d2ee80e-a98d-42db-821c-a6bda51cf80f"
       },
       "codeBehindProcess": {
-        "key": "ebce7968-6f9c-42ed-8698-13d7d6524e09"
+        "key": "45c01bf7-5f45-4eb3-aa66-2c0dd0121a46"
       },
       "actionSchema": null
     },
     "locks": [],
-    "key": "62800f09-dc50-482c-b435-bb9daad3c716"
+    "key": "d71eb04f-8b0b-4778-95f6-dffc7e3bd49e"
   }
 }
