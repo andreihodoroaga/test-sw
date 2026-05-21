@@ -9,7 +9,11 @@
     "dependencies": [],
     "runtimeDependencies": [],
     "files": [],
-    "folders": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
     "spec": {
       "name": "App",
       "description": null,
