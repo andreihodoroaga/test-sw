@@ -1,0 +1,27 @@
+{
+  "document": {
+    "dsl": "1.0.0",
+    "name": "Workflow",
+    "tags": {},
+    "version": "0.0.1",
+    "namespace": "default",
+    "metadata": {
+      "variables": []
+    }
+  },
+  "do": [
+    {
+      "Sequence_1": {
+        "do": [],
+        "metadata": {
+          "fullName": "Sequence",
+          "activityType": "Sequence"
+        }
+      }
+    }
+  ],
+  "evaluate": {
+    "mode": "strict",
+    "language": "javascript"
+  }
+}

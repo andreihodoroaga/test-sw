@@ -1,0 +1,10 @@
+{
+  "SolutionId": "1e9f03ff-f5e9-48d2-9c07-592d8bff0619",
+  "Projects": [
+    {
+      "Id": "68f5a1b9-84e2-4515-a267-64b93673b61c",
+      "Type": "Api",
+      "ProjectRelativePath": "API Workflow/project.uiproj"
+    }
+  ]
+}
