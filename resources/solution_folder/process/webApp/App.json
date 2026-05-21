@@ -28,9 +28,9 @@
       "name": "App",
       "description": null,
       "package": {
-        "key": "c6f2fcbf-8daa-4be6-b9ee-ac2316eefde1"
+        "key": "2285e576-cf08-401c-a261-9eecf08e8bef"
       },
-      "packageName": "Solution.webApp.App",
+      "packageName": "test-sw.webApp.App",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": "{}",
@@ -56,6 +56,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "ebce7968-6f9c-42ed-8698-13d7d6524e09"
+    "key": "45c01bf7-5f45-4eb3-aa66-2c0dd0121a46"
   }
 }
