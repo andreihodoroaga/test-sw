@@ -5,7 +5,7 @@
   "dateLastOpened": "2026-05-21T08:56:57.435Z",
   "type": "form",
   "iconUrl": "assets/svg/form.svg",
-  "idCounter": 1229,
+  "idCounter": 1361,
   "ownerFqn": "andrei.hodoroaga@uipath.com",
   "ownerId": "7b02641d-7946-4d18-9391-9c05175359a1",
   "createdByFqn": "andrei.hodoroaga@uipath.com",
@@ -52,7 +52,8 @@
         "id": "ID1010",
         "childIds": [
           "idba4130145a86411f9f90b9f52e0061a0",
-          "id5be3f04921924c2bafc405e61b368c0a"
+          "id5be3f04921924c2bafc405e61b368c0a",
+          "idd3922e4d91e742f095954eea5b09eb21"
         ]
       },
       "properties": {
@@ -1540,6 +1541,640 @@
       "ruleOutputs": {},
       "traits": {},
       "_logicalParent": "ID1"
+    },
+    "idd3922e4d91e742f095954eea5b09eb21": {
+      "id": "idd3922e4d91e742f095954eea5b09eb21",
+      "iconUrl": "assets/svg/form/controls/basic/file-picker.svg",
+      "component": "form-file-uploader",
+      "ruleInstances": {},
+      "name": "FileUploader",
+      "version": 1,
+      "config": {
+        "id": "ID1241"
+      },
+      "properties": {
+        "flexDirection": {
+          "id": "ID1355",
+          "name": "flexDirection",
+          "valueType": "string",
+          "value": ""
+        },
+        "verticalAlignment": {
+          "id": "ID1356",
+          "name": "verticalAlignment",
+          "valueType": "string",
+          "value": ""
+        },
+        "tooltip": {
+          "id": "ID1357",
+          "name": "tooltip",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1358",
+            "expressionId": "idaa7c7b0794eb45b3aa0134383c685dcd",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1359"
+            }
+          }
+        },
+        "required": {
+          "id": "ID1242",
+          "name": "required",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1243",
+            "expressionId": "id72295f7ba3ed436caae258f95d60a7b8",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1244"
+            }
+          }
+        },
+        "requiredErrorMessage": {
+          "id": "ID1245",
+          "name": "requiredErrorMessage",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1246",
+            "expressionId": "id94240c334a364fb0a17757d6f362b784",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1247"
+            }
+          }
+        },
+        "label": {
+          "id": "ID1248",
+          "name": "label",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1249",
+            "expressionId": "id95f8739d8cae4824943141ba911310a8",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1250"
+            }
+          }
+        },
+        "inputControlLabelPosition": {
+          "id": "ID1251",
+          "name": "inputControlLabelPosition",
+          "valueType": "string",
+          "value": "column"
+        },
+        "display": {
+          "id": "ID1252",
+          "name": "display",
+          "valueType": "string",
+          "value": "flex"
+        },
+        "size": {
+          "id": "ID1253",
+          "name": "size",
+          "valueType": "size",
+          "value": {
+            "id": "ID1254",
+            "width": null,
+            "widthUnit": "auto",
+            "height": null,
+            "heightUnit": "auto"
+          }
+        },
+        "minSize": {
+          "id": "ID1255",
+          "name": "minSize",
+          "valueType": "size",
+          "value": {
+            "id": "ID1256",
+            "width": 0,
+            "widthUnit": "px",
+            "height": 0,
+            "heightUnit": "px"
+          }
+        },
+        "maxSize": {
+          "id": "ID1257",
+          "name": "maxSize",
+          "valueType": "size",
+          "value": {
+            "id": "ID1258",
+            "width": null,
+            "widthUnit": "none",
+            "height": null,
+            "heightUnit": "none"
+          }
+        },
+        "verticalOverflow": {
+          "id": "ID1259",
+          "name": "verticalOverflow",
+          "valueType": "string",
+          "value": "hidden"
+        },
+        "horizontalOverflow": {
+          "id": "ID1260",
+          "name": "horizontalOverflow",
+          "valueType": "string",
+          "value": "hidden"
+        },
+        "bold": {
+          "id": "ID1261",
+          "name": "bold",
+          "valueType": "boolean",
+          "value": false
+        },
+        "italic": {
+          "id": "ID1262",
+          "name": "italic",
+          "valueType": "boolean",
+          "value": false
+        },
+        "underline": {
+          "id": "ID1263",
+          "name": "underline",
+          "valueType": "boolean"
+        },
+        "fontFamily": {
+          "id": "ID1264",
+          "name": "fontFamily",
+          "valueType": "string",
+          "value": "var(--apps-theme-font-family, Noto Sans)"
+        },
+        "fontSize": {
+          "id": "ID1265",
+          "name": "fontSize",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1266",
+            "value": 14,
+            "valueUnit": "px"
+          }
+        },
+        "textColor": {
+          "id": "ID1267",
+          "name": "textColor",
+          "valueType": "string",
+          "value": "#333333"
+        },
+        "backgroundColor": {
+          "id": "ID1268",
+          "name": "backgroundColor",
+          "valueType": "string",
+          "value": ""
+        },
+        "hidden": {
+          "id": "ID1269",
+          "value": ""
+        },
+        "disabled": {
+          "id": "ID1270",
+          "value": ""
+        },
+        "readonly": {
+          "id": "ID1271",
+          "name": "readonly",
+          "valueType": "boolean"
+        },
+        "margin": {
+          "id": "ID1272",
+          "name": "margin",
+          "valueType": "box",
+          "value": {
+            "id": "ID1273",
+            "top": 4,
+            "left": 4,
+            "bottom": 4,
+            "right": 4,
+            "topUnit": "px",
+            "leftUnit": "px",
+            "bottomUnit": "px",
+            "rightUnit": "px"
+          }
+        },
+        "padding": {
+          "id": "ID1274",
+          "name": "padding",
+          "valueType": "box",
+          "value": {
+            "id": "ID1275",
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0,
+            "topUnit": "px",
+            "leftUnit": "px",
+            "bottomUnit": "px",
+            "rightUnit": "px"
+          }
+        },
+        "borderColor": {
+          "id": "ID1276",
+          "name": "borderColor",
+          "valueType": "string",
+          "value": ""
+        },
+        "fontStyle": {
+          "id": "ID1277",
+          "name": "fontStyle",
+          "valueType": "string"
+        },
+        "fontSizeColor": {
+          "id": "ID1278",
+          "name": "fontSizeColor",
+          "valueType": "string"
+        },
+        "borderStyle": {
+          "id": "ID1279",
+          "name": "borderStyle",
+          "valueType": "string",
+          "value": "solid"
+        },
+        "borderThickness": {
+          "id": "ID1280",
+          "name": "borderThickness",
+          "valueType": "box",
+          "value": {
+            "id": "ID1281",
+            "topUnit": "px",
+            "leftUnit": "px",
+            "bottomUnit": "px",
+            "rightUnit": "px"
+          }
+        },
+        "borderRadius": {
+          "id": "ID1282",
+          "name": "borderRadius",
+          "valueType": "corner",
+          "value": {
+            "id": "ID1283",
+            "topLeftUnit": "px",
+            "topRightUnit": "px",
+            "bottomRightUnit": "px",
+            "bottomLeftUnit": "px"
+          }
+        },
+        "boxShadow": {
+          "id": "ID1284",
+          "name": "boxShadow",
+          "valueType": "drop-shadow",
+          "value": {
+            "id": "ID1285"
+          }
+        },
+        "boxShadowColor": {
+          "id": "ID1286",
+          "name": "boxShadowColor",
+          "valueType": "string"
+        },
+        "gridColumn": {
+          "id": "ID1287",
+          "name": "gridColumn",
+          "valueType": "number"
+        },
+        "gridRow": {
+          "id": "ID1288",
+          "name": "gridRow",
+          "valueType": "number"
+        },
+        "gridColumnSpan": {
+          "id": "ID1289",
+          "name": "gridColumnSpan",
+          "valueType": "number"
+        },
+        "gridRowSpan": {
+          "id": "ID1290",
+          "name": "gridRowSpan",
+          "valueType": "number"
+        },
+        "cssClasses": {
+          "id": "ID1291",
+          "name": "cssClasses",
+          "valueType": "string"
+        },
+        "cursor": {
+          "id": "ID1292",
+          "name": "cursor",
+          "valueType": "string"
+        },
+        "opacity": {
+          "id": "ID1293",
+          "name": "opacity",
+          "valueType": "decimal"
+        },
+        "backgroundImageUrl": {
+          "id": "ID1294",
+          "name": "backgroundImageUrl",
+          "valueType": "resolver-list",
+          "value": {
+            "id": "ID1295",
+            "resolvers": [],
+            "customExpressionBuilderDefinition": {
+              "id": "ID1296",
+              "customResolversForRegistration": []
+            }
+          }
+        },
+        "backgroundImageBase64": {
+          "id": "ID1297",
+          "name": "backgroundImageBase64",
+          "valueType": "string"
+        },
+        "backgroundImageDocumentBinding": {
+          "id": "ID1298",
+          "name": "backgroundImageDocumentBinding",
+          "valueType": "document-binding",
+          "value": {
+            "id": "ID1299",
+            "binding": {
+              "id": "ID1300",
+              "rootType": null,
+              "rootSystemName": "",
+              "instanceJPath": "",
+              "objectJPath": "",
+              "itemType": null
+            }
+          }
+        },
+        "backgroundImagePosition": {
+          "id": "ID1301",
+          "name": "backgroundImagePosition",
+          "valueType": "position",
+          "value": {
+            "id": "ID1302"
+          }
+        },
+        "backgroundImageRepeat": {
+          "id": "ID1303",
+          "name": "backgroundImageRepeat",
+          "valueType": "string"
+        },
+        "backgroundImageSize": {
+          "id": "ID1304",
+          "name": "backgroundImageSize",
+          "valueType": "string"
+        },
+        "flexGrow": {
+          "id": "ID1305",
+          "name": "flexGrow",
+          "valueType": "number"
+        },
+        "flexShrink": {
+          "id": "ID1306",
+          "name": "flexShrink",
+          "valueType": "number"
+        },
+        "position": {
+          "id": "ID1307",
+          "name": "position",
+          "valueType": "string"
+        },
+        "absolutePosition": {
+          "id": "ID1308",
+          "name": "absolutePosition",
+          "valueType": "box",
+          "value": {
+            "id": "ID1309"
+          }
+        },
+        "zIndex": {
+          "id": "ID1310",
+          "name": "zIndex",
+          "valueType": "number"
+        },
+        "borderSizeColor": {
+          "id": "ID1311",
+          "name": "borderSizeColor",
+          "valueType": "string"
+        },
+        "spaceBetween": {
+          "id": "ID1312",
+          "name": "spaceBetween",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1313"
+          }
+        },
+        "resolvableDisabled": {
+          "id": "ID1314",
+          "name": "resolvableDisabled",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1315",
+            "expressionId": "id3406e7a2163648e7a4885490f6fb1905",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1316"
+            }
+          }
+        },
+        "resolvableHidden": {
+          "id": "ID1317",
+          "name": "resolvableHidden",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1318",
+            "expressionId": "ide812a4cc03754e6cbaa67c3a7aeafad9",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1319"
+            }
+          }
+        },
+        "flexScroll": {
+          "id": "ID1320",
+          "name": "flexScroll",
+          "valueType": "boolean"
+        },
+        "isValid": {
+          "id": "ID1321",
+          "name": "isValid",
+          "valueType": "boolean",
+          "value": true
+        },
+        "maxFileSize": {
+          "id": "ID1322",
+          "name": "maxFileSize",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1323",
+            "value": 10,
+            "valueUnit": "MB"
+          }
+        },
+        "inputControlLabelFontFamily": {
+          "id": "ID1324",
+          "name": "inputControlLabelFontFamily",
+          "valueType": "string",
+          "value": ""
+        },
+        "inputControlLabelFontSize": {
+          "id": "ID1325",
+          "name": "inputControlLabelFontSize",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1326",
+            "value": 14,
+            "valueUnit": "px"
+          }
+        },
+        "inputControlLabelTextColor": {
+          "id": "ID1327",
+          "name": "inputControlLabelTextColor",
+          "valueType": "string",
+          "value": "#333333"
+        },
+        "inputControlLabelBold": {
+          "id": "ID1328",
+          "name": "inputControlLabelBold",
+          "valueType": "boolean",
+          "value": false
+        },
+        "inputControlLabelItalic": {
+          "id": "ID1329",
+          "name": "inputControlLabelItalic",
+          "valueType": "boolean",
+          "value": false
+        },
+        "inputControlLabelUnderline": {
+          "id": "ID1330",
+          "name": "inputControlLabelUnderline",
+          "valueType": "boolean",
+          "value": false
+        },
+        "horizontalAlignment": {
+          "id": "ID1360",
+          "name": "horizontalAlignment",
+          "valueType": "string",
+          "value": "center"
+        },
+        "controlAlignment": {
+          "id": "ID1331",
+          "name": "controlAlignment",
+          "valueType": "string",
+          "value": ""
+        },
+        "inputControlLabelSpaceBetween": {
+          "id": "ID1332",
+          "name": "inputControlLabelSpaceBetween",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1333",
+            "value": 8,
+            "valueUnit": "px"
+          }
+        },
+        "inputControlLabelWidth": {
+          "id": "ID1334",
+          "name": "inputControlLabelWidth",
+          "valueType": "value-with-unit",
+          "value": {
+            "id": "ID1335",
+            "value": 250,
+            "valueUnit": "px"
+          }
+        },
+        "text": {
+          "id": "ID1336",
+          "name": "text",
+          "valueType": "vb-expression",
+          "value": {
+            "id": "ID1337",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1338"
+            }
+          }
+        },
+        "fileName": {
+          "id": "ID1339",
+          "name": "fileName",
+          "valueType": "string",
+          "value": ""
+        },
+        "fileSize": {
+          "id": "ID1340",
+          "name": "fileSize",
+          "valueType": "number",
+          "value": 0
+        },
+        "fileType": {
+          "id": "ID1341",
+          "name": "fileType",
+          "valueType": "string",
+          "value": ""
+        },
+        "fileNameWithoutType": {
+          "id": "ID1342",
+          "name": "fileNameWithoutType",
+          "valueType": "string",
+          "value": ""
+        },
+        "coordinates": {
+          "id": "ID1361",
+          "name": "coordinates",
+          "valueType": "string",
+          "value": {
+            "x": 0,
+            "y": 0,
+            "w": 17,
+            "h": 4
+          }
+        },
+        "valueBinding": {
+          "id": "ID1343",
+          "name": "valueBinding",
+          "valueType": "vb-external-binding",
+          "value": {
+            "id": "ID1344",
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1345"
+            }
+          }
+        },
+        "allowedFileTypes": {
+          "id": "ID1346",
+          "name": "allowedFileTypes",
+          "valueType": "string"
+        },
+        "helperText": {
+          "id": "ID1347",
+          "name": "helperText",
+          "valueType": "string"
+        },
+        "fileUploadingState": {
+          "id": "ID1348",
+          "name": "fileUploadingState",
+          "valueType": "string"
+        },
+        "inputControlLabelFontSizeColor": {
+          "id": "ID1349",
+          "name": "inputControlLabelFontSizeColor",
+          "valueType": "string"
+        },
+        "inputControlLabelFontStyle": {
+          "id": "ID1350",
+          "name": "inputControlLabelFontStyle",
+          "valueType": "string"
+        }
+      },
+      "events": {
+        "fileAdd": {
+          "id": "ID1351",
+          "eventType": "fileAdd",
+          "description": "",
+          "executors": []
+        },
+        "fileRemove": {
+          "id": "ID1352",
+          "eventType": "fileRemove",
+          "description": "",
+          "executors": []
+        }
+      },
+      "ruleOutputs": {},
+      "traits": {},
+      "_logicalParent": "ID1"
     }
   },
   "rootPanelId": "ID1",
@@ -1805,6 +2440,89 @@
           "addedVia": "EE",
           "validationConfig": {
             "id": "ID1223"
+          }
+        }
+      }
+    },
+    "idd3922e4d91e742f095954eea5b09eb21": {
+      "id": "ID1230",
+      "expressions": {
+        "id3406e7a2163648e7a4885490f6fb1905": {
+          "id": "ID1231",
+          "expression": "false",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.resolvableDisabled.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1232"
+          }
+        },
+        "ide812a4cc03754e6cbaa67c3a7aeafad9": {
+          "id": "ID1233",
+          "expression": "false",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.resolvableHidden.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1234"
+          }
+        },
+        "id72295f7ba3ed436caae258f95d60a7b8": {
+          "id": "ID1235",
+          "expression": "false",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.required.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1236"
+          }
+        },
+        "id94240c334a364fb0a17757d6f362b784": {
+          "id": "ID1237",
+          "expression": "\"Required field\"",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.requiredErrorMessage.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1238"
+          }
+        },
+        "id95f8739d8cae4824943141ba911310a8": {
+          "id": "ID1239",
+          "expression": "\"Label\"",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.label.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1240"
+          }
+        },
+        "idaa7c7b0794eb45b3aa0134383c685dcd": {
+          "id": "ID1353",
+          "expression": "",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.idd3922e4d91e742f095954eea5b09eb21.properties.tooltip.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1354"
           }
         }
       }
