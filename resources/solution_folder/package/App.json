@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "App",
-      "description": null
+      "name": "App"
     },
     "locks": [],
-    "key": "2285e576-cf08-401c-a261-9eecf08e8bef"
+    "key": "2285e576-cf08-401c-a261-9eecf08e8bef",
+    "files": []
   }
 }

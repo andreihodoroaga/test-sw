@@ -17,7 +17,6 @@
       }
     ],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -25,19 +24,16 @@
     ],
     "spec": {
       "name": "App",
-      "description": null,
       "type": "Regular",
-      "version": null,
-      "appSystemName": null,
       "appVersionRef": {
         "key": "bdbfa3e6-249e-4ffb-8e42-c28f0cc1f6fe"
       },
       "codeBehindProcess": {
         "key": "d16e80f4-26b5-4a1c-a61b-9a618cdff034"
-      },
-      "actionSchema": null
+      }
     },
     "locks": [],
-    "key": "21571e33-6a8b-43e2-b407-977766335021"
+    "key": "21571e33-6a8b-43e2-b407-977766335021",
+    "files": []
   }
 }
