@@ -8,7 +8,6 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -17,13 +16,13 @@
     "spec": {
       "connectorName": "GitHub",
       "name": "andreihodoroaga",
-      "description": null,
       "authenticationType": "AuthenticateAfterDeployment",
       "connectorVersion": "2.6.12",
       "connectorKey": "uipath-microsoft-github",
       "pollingInterval": 5
     },
     "locks": [],
-    "key": "90a248a4-8a4d-4dce-8b21-58c8981bb026"
+    "key": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+    "files": []
   }
 }

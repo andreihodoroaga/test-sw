@@ -14,25 +14,18 @@
       }
     ],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
       "type": "Process",
       "name": "RPA Workflow",
-      "description": null,
       "package": {
         "key": "0ed7434a-f228-4edd-9dcf-c2828213dc3e"
       },
       "packageName": "Solution.process.RPA.Workflow",
-      "packageVersion": null,
-      "entryPointName": null,
       "inputArguments": "{}",
       "jobPriority": "Medium",
       "hiddenForAttendedUser": false,
@@ -46,15 +39,12 @@
       "remoteControlAccess": "None",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
       "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
       "tags": []
     },
     "locks": [],
-    "key": "ab5ca91a-1c05-45df-87d1-42ed78756eca"
+    "key": "ab5ca91a-1c05-45df-87d1-42ed78756eca",
+    "files": []
   }
 }

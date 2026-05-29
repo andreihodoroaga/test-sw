@@ -14,25 +14,18 @@
       }
     ],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
       "type": "WebApp",
       "name": "App",
-      "description": null,
       "package": {
         "key": "2285e576-cf08-401c-a261-9eecf08e8bef"
       },
       "packageName": "test-sw.webApp.App",
-      "packageVersion": null,
-      "entryPointName": null,
       "inputArguments": "{}",
       "jobPriority": "Medium",
       "hiddenForAttendedUser": true,
@@ -47,15 +40,12 @@
       "robotSize": "Automatic",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
       "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
       "tags": []
     },
     "locks": [],
-    "key": "45c01bf7-5f45-4eb3-aa66-2c0dd0121a46"
+    "key": "45c01bf7-5f45-4eb3-aa66-2c0dd0121a46",
+    "files": []
   }
 }

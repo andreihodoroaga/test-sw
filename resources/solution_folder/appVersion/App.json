@@ -8,19 +8,17 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
-    "folders": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
     "spec": {
       "name": "App",
-      "description": null,
-      "publishNote": null,
-      "version": null,
-      "projectId": null,
-      "isAppPublic": false,
-      "packageFile": null,
-      "packageKey": null
+      "isAppPublic": false
     },
     "locks": [],
-    "key": "4d2ee80e-a98d-42db-821c-a6bda51cf80f"
+    "key": "4d2ee80e-a98d-42db-821c-a6bda51cf80f",
+    "files": []
   }
 }
