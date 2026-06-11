@@ -1,0 +1,219 @@
+{
+  "document": {
+    "dsl": "1.0.0",
+    "name": "Workflow",
+    "tags": {
+      "projectId": "4976a230",
+      "solutionId": "ad7e78c3"
+    },
+    "version": "0.0.1",
+    "namespace": "default",
+    "metadata": {
+      "variables": []
+    }
+  },
+  "do": [
+    {
+      "sequence_1": {
+        "do": [
+          {
+            "WorkflowStart": {
+              "set": "${Object.entries($workflow.definition?.document?.metadata?.variables?.schema?.document?.properties || {}).reduce((acc, [name, def]) => ({ ...acc, [name]: def?.default }), {}) }",
+              "output": {
+                "as": "${$input}"
+              },
+              "export": {
+                "as": "{ ...$context, variables: { ...$context.variables, ...$output } }"
+              },
+              "metadata": {
+                "activityType": "Assign",
+                "displayName": "Workflow start",
+                "fullName": "Assign",
+                "isTransparent": true
+              }
+            }
+          },
+          {
+            "get_user_repos": {
+              "call": "UiPath.Http",
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"get_user_repos\": $output } }"
+              },
+              "with": {
+                "connector": "uipath-uipath-http",
+                "connectionId": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+                "connectionResourceId": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+                "method": "POST",
+                "endpoint": "/http-request",
+                "bodyParameters": {
+                  "authentication": "connector",
+                  "targetConnector": "uipath-microsoft-github",
+                  "connection": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+                  "method": "GET",
+                  "path": "/users/andreihodoroaga/repos",
+                  "url": "/users/andreihodoroaga/repos"
+                }
+              },
+              "metadata": {
+                "activityType": "Connector",
+                "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"1.4.44\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"connectorKey\":\"uipath-uipath-http\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"activityType\":\"Curated\",\"version\":\"1.0.0\",\"supportsStreaming\":false},\"objectName\":\"http-request\",\"operation\":\"create\",\"packageVersion\":\"\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"},\"optionalConfiguration\":{\"_textBlocks\":[],\"objectActions\":[],\"connectorName\":\"HTTP\",\"maxPageSize\":100,\"jobArguments\":null,\"isAutopilotInvalidConfig\":false,\"additionalHeaders\":null,\"cachedLookupValues\":[],\"cachedBrowserItems\":[],\"cachedPropertyMappings\":[],\"primaryKeys\":[],\"objectDisplayName\":\"HTTP Request\",\"baseObject\":null,\"eventMode\":null,\"eventOperation\":null,\"language\":\"en-US\",\"hasBreakingChanges\":false,\"fieldsContainer\":{\"outputTypeDefinition\":\"{\\\"body\\\":object;\\\"code\\\":number;\\\"method\\\":string;\\\"rawStringBody\\\":string;\\\"request\\\":{\\\"headers\\\":object;\\\"methodType\\\":string;\\\"query\\\":object;\\\"type\\\":string;\\\"url\\\":string}}\",\"outputJsonSchema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"method\":{\"title\":\"Method\",\"type\":\"string\",\"description\":\"Specifies the HTTP method to be used for the request.\"},\"body\":{\"title\":\"Body\",\"$ref\":\"#/definitions/body\"},\"code\":{\"title\":\"Code\",\"type\":\"integer\",\"description\":\"The Code\"},\"rawStringBody\":{\"title\":\"Raw body\",\"type\":\"string\",\"description\":\"The Raw string body\"},\"request\":{\"title\":\"Request\",\"$ref\":\"#/definitions/request\"}},\"definitions\":{\"body\":{\"type\":\"object\",\"properties\":{}},\"request\":{\"type\":\"object\",\"properties\":{\"type\":{\"title\":\"Request type\",\"type\":\"string\",\"description\":\"The Request type\"},\"url\":{\"title\":\"Request url\",\"type\":\"string\",\"description\":\"The Request url\"},\"methodType\":{\"title\":\"Method\",\"type\":\"string\",\"description\":\"The Request method type\"}}}}},\"populateOutputFields\":false,\"inputFields\":[{\"typeScriptDefinition\":null,\"id\":\"authentication\",\"name\":\"authentication\",\"displayName\":\"Authentication\",\"description\":\"Authentication\",\"type\":\"string\",\"sortOrder\":1,\"defaultValue\":\"manual\",\"primaryKey\":false,\"enum\":[{\"name\":\"Manual authentication\",\"value\":\"manual\",\"description\":\"Provide authentication details directly in the request\"},{\"name\":\"Connector based authentication\",\"value\":\"connector\",\"description\":\"Use authentication details from a configured connector\"}],\"fieldActions\":null,\"searchable\":false,\"searchableJoins\":null,\"required\":true,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":true,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"targetConnector\",\"name\":\"targetConnector\",\"displayName\":\"Connector\",\"description\":\"Select a connector\",\"type\":\"string\",\"sortOrder\":2,\"primaryKey\":false,\"lookup\":{\"objectName\":\"connectors\",\"lookupNames\":[\"name\"],\"lookupValue\":\"key\",\"path\":\"/Connectors?hasHttpRequest=true\",\"orderBy\":\"NONE\",\"defaultLookupValues\":[{\"name\":\"HTTP\",\"key\":\"uipath-uipath-http\",\"priority\":1,\"isDefault\":true,\"description\":\"UiPath HTTP connector for general API requests\"}]},\"design\":{\"component\":\"Connectors\",\"loadByDefault\":true,\"isMultiSelect\":false,\"enableUserOverride\":false,\"displayPattern\":\"{name}\",\"isHidden\":false,\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"isCleared\":true,\"isVariable\":false}]}],\"position\":\"primary\",\"solutionResourceKind\":\"connector\"},\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"isCleared\":true,\"isVariable\":false}]}],\"searchable\":false,\"searchableJoins\":null,\"required\":true,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":true,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"connection\",\"name\":\"connection\",\"displayName\":\"Connection\",\"description\":\"Connections\",\"type\":\"string\",\"sortOrder\":3,\"primaryKey\":false,\"design\":{\"component\":\"Connections\",\"loadByDefault\":true,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"fieldActions\":[{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false},{\"type\":\"field\",\"refFieldName\":\"targetConnector\",\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false},{\"type\":\"field\",\"refFieldName\":\"targetConnector\",\"refFieldValues\":[\"*\"],\"isCleared\":true,\"isVariable\":false}]}],\"position\":\"primary\",\"solutionResourceKind\":\"connection\"},\"fieldActions\":[{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false},{\"type\":\"field\",\"refFieldName\":\"targetConnector\",\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"isCleared\":true,\"isVariable\":false}]},{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false},{\"type\":\"field\",\"refFieldName\":\"targetConnector\",\"refFieldValues\":[\"*\"],\"isCleared\":true,\"isVariable\":false}]},{\"rules\":[{\"refFieldName\":\"targetConnector\",\"refFieldValues\":[\"*\"],\"isCleared\":false,\"isConstantValue\":false,\"isWorkflowExpression\":false}],\"actionType\":\"grabValue\",\"groupNames\":[],\"messages\":null}],\"searchable\":false,\"searchableJoins\":null,\"required\":true,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"method\",\"name\":\"method\",\"displayName\":\"Method\",\"description\":\"Specifies the HTTP method to be used for the request.\",\"type\":\"string\",\"sortOrder\":4,\"defaultValue\":\"GET\",\"primaryKey\":false,\"enum\":[{\"name\":\"GET\",\"value\":\"GET\"},{\"name\":\"POST\",\"value\":\"POST\"},{\"name\":\"PUT\",\"value\":\"PUT\"},{\"name\":\"PATCH\",\"value\":\"PATCH\"},{\"name\":\"DELETE\",\"value\":\"DELETE\"},{\"name\":\"OPTIONS\",\"value\":\"OPTIONS\"},{\"name\":\"HEAD\",\"value\":\"HEAD\"}],\"design\":{\"loadByDefault\":true,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"position\":\"primary\"},\"fieldActions\":null,\"searchable\":false,\"searchableJoins\":null,\"required\":true,\"request\":true,\"response\":true,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":true,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"url\",\"name\":\"url\",\"displayName\":\"URL\",\"description\":\"The web address where the HTTP request is sent.\",\"type\":\"string\",\"sortOrder\":5,\"primaryKey\":false,\"design\":{\"loadByDefault\":false,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false}]}],\"position\":\"primary\"},\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":true,\"isVariable\":false}]}],\"searchable\":false,\"searchableJoins\":null,\"required\":true,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"path\",\"name\":\"path\",\"displayName\":\"Path\",\"description\":\"The endpoint path for the REST API request.\",\"type\":\"string\",\"sortOrder\":5,\"primaryKey\":false,\"design\":{\"loadByDefault\":false,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]}],\"position\":\"primary\"},\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"connector\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"authentication\",\"refFieldValues\":[\"manual\"],\"isCleared\":true,\"isVariable\":false}]}],\"searchable\":false,\"searchableJoins\":null,\"required\":false,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"String\",\"assemblyQualifiedName\":\"String\",\"isValueType\":true},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"headers\",\"name\":\"headers\",\"displayName\":\"Headers\",\"description\":\"Headers\",\"type\":\"object\",\"sortOrder\":6,\"primaryKey\":false,\"design\":{\"component\":\"Dictionary\",\"loadByDefault\":false,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"position\":\"primary\",\"dictionaryWidget\":{\"windowTitle\":\"\",\"windowDescription\":\"\",\"columnKeyTitle\":\"\",\"columnKeyDescription\":\"\",\"columnKeyHint\":\"\",\"columnValueTitle\":\"\",\"columnValueDescription\":\"\",\"columnValueHint\":\"\"}},\"fieldActions\":null,\"searchable\":false,\"searchableJoins\":null,\"required\":false,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"Object\",\"assemblyQualifiedName\":\"Object\",\"isValueType\":false},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"query\",\"name\":\"query\",\"displayName\":\"Query parameters\",\"description\":\"Query parameters\",\"type\":\"object\",\"sortOrder\":7,\"primaryKey\":false,\"design\":{\"component\":\"Dictionary\",\"loadByDefault\":false,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"position\":\"primary\",\"dictionaryWidget\":{\"windowTitle\":\"\",\"windowDescription\":\"\",\"columnKeyTitle\":\"\",\"columnKeyDescription\":\"\",\"columnKeyHint\":\"\",\"columnValueTitle\":\"\",\"columnValueDescription\":\"\",\"columnValueHint\":\"\"}},\"fieldActions\":null,\"searchable\":false,\"searchableJoins\":null,\"required\":false,\"request\":true,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":true,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"Object\",\"assemblyQualifiedName\":\"Object\",\"isValueType\":false},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},{\"typeScriptDefinition\":null,\"id\":\"body\",\"name\":\"body\",\"displayName\":\"Body\",\"description\":\"Contains the data to be sent with the HTTP request.\",\"type\":\"object\",\"sortOrder\":8,\"primaryKey\":false,\"design\":{\"loadByDefault\":false,\"isMultiSelect\":false,\"enableUserOverride\":false,\"isHidden\":false,\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"method\",\"refFieldValues\":[\"POST\",\"PATCH\",\"PUT\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"method\",\"refFieldValues\":[\"GET\",\"HEAD\",\"OPTIONS\",\"DELETE\"],\"isCleared\":true,\"isVariable\":false,\"isWorkflowExpression\":true}]}],\"position\":\"primary\"},\"fieldActions\":[{\"actionType\":\"show\",\"priorityOrder\":1,\"rules\":[{\"type\":\"field\",\"refFieldName\":\"method\",\"refFieldValues\":[\"POST\",\"PATCH\",\"PUT\"],\"isCleared\":false,\"isVariable\":false,\"isWorkflowExpression\":true}]},{\"actionType\":\"hide\",\"rules\":[{\"type\":\"field\",\"refFieldName\":\"method\",\"refFieldValues\":[\"GET\",\"HEAD\",\"OPTIONS\",\"DELETE\"],\"isCleared\":true,\"isVariable\":false,\"isWorkflowExpression\":true}]}],\"searchable\":false,\"searchableJoins\":null,\"required\":false,\"request\":true,\"response\":true,\"responseCurated\":false,\"fieldLocation\":\"body\",\"onCanvas\":null,\"isJitField\":false,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"Object\",\"assemblyQualifiedName\":\"Object\",\"isValueType\":false},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null}],\"outputFields\":[],\"jitTypeNeedsRefresh\":false,\"jitInputField\":{\"typeScriptDefinition\":\"{\\\"authentication\\\":string;\\\"body\\\":object;\\\"connection\\\":string;\\\"headers\\\":object;\\\"method\\\":string;\\\"path\\\":string;\\\"query\\\":object;\\\"targetConnector\\\":string;\\\"url\\\":string}\",\"id\":\"in_http-request\",\"name\":\"http-request\",\"displayName\":\"HTTP Request\",\"description\":\"HTTP Request input object\",\"type\":\"Generatedhttp-request\",\"sortOrder\":null,\"format\":null,\"mask\":null,\"defaultValue\":\"{\\n  \\\"authentication\\\": null,\\n  \\\"body\\\": null,\\n  \\\"connection\\\": null,\\n  \\\"headers\\\": null,\\n  \\\"method\\\": null,\\n  \\\"path\\\": null,\\n  \\\"query\\\": null,\\n  \\\"targetConnector\\\": null,\\n  \\\"url\\\": null\\n}\",\"primaryKey\":false,\"lookup\":null,\"enum\":null,\"design\":null,\"fieldActions\":null,\"searchable\":false,\"searchableOperators\":null,\"searchableNames\":null,\"searchableJoins\":null,\"required\":true,\"request\":false,\"response\":false,\"responseCurated\":false,\"fieldLocation\":\"jitObjectInput\",\"onCanvas\":null,\"isJitField\":true,\"isFieldActionParent\":false,\"isMainResponseField\":false,\"isMethodParameter\":false,\"isBackgroundField\":false,\"filterTree\":null,\"filterNeedsRefresh\":null,\"arrayInputPaths\":null,\"clrType\":{\"_elementType\":null,\"_isNullable\":false,\"isArray\":false,\"genericTypeArguments\":[],\"fullName\":null,\"name\":\"Object\",\"assemblyQualifiedName\":\"Object\",\"isValueType\":false},\"forceExpressionEditor\":false,\"requiredGroups\":null,\"disableExpressions\":false,\"backingField\":null,\"searchableDisplayName\":null,\"selectedResourceId\":null},\"inputMode\":null,\"searchableFields\":[],\"hasUnifiedTypes\":true,\"jitTypeHash\":null},\"connectorKey\":\"uipath-microsoft-github\",\"activityType\":\"Generic\",\"version\":\"1.0.0\",\"supportsStreaming\":false,\"requestPreviewParameters\":{\"url\":\"https://api.github.com\",\"headers\":{\"Authorization\":\"Bearer gho_f******\",\"Accept\":\"application/json\",\"Content-Type\":\"application/json\"},\"query\":{},\"method\":\"GET\"}}}",
+                "displayName": " rares repositories for the user \"andreihodoroaga\"",
+                "fullName": "Connector",
+                "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                "assemblyQualifiedName": "Connector",
+                "outputName": "get_user_repos"
+              }
+            }
+          },
+          {
+            "extract_repo_names": {
+              "run": {
+                "script": {
+                  "code": "const repos = $context.outputs.get_user_repos.content;\nif (!Array.isArray(repos)) {\n  return [];\n}\nconst repoNames = repos.slice(0, 3).map(repo => repo.name);\nreturn repoNames;",
+                  "language": "javascript",
+                  "arguments": "${{\n                        \"$context\": $context,\n                        \"$workflow\": $workflow,\n                        \"$input\": $input,\n                    }}"
+                }
+              },
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"extract_repo_names\": $output } }"
+              },
+              "metadata": {
+                "activityType": "JsInvoke",
+                "displayName": "Extract the first 3 repository names from the response",
+                "fullName": "JsInvoke",
+                "outputName": "extract_repo_names"
+              }
+            }
+          },
+          {
+            "Response_1": {
+              "response": "${$context.outputs.extract_repo_names}",
+              "markJobAsFailed": false,
+              "then": "end",
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"Response_1\": $output } }"
+              },
+              "metadata": {
+                "activityType": "Response",
+                "displayName": "Return the repository names",
+                "fullName": "Response",
+                "outputName": "Response_1"
+              }
+            }
+          },
+          {
+            "If_1#Wrapper": {
+              "do": [
+                {
+                  "If_1": {
+                    "switch": [
+                      {
+                        "case": {
+                          "when": "${}",
+                          "then": "If_1#Then"
+                        }
+                      },
+                      {
+                        "default": {
+                          "then": "If_1#Else"
+                        }
+                      }
+                    ],
+                    "metadata": {
+                      "displayName": "If"
+                    }
+                  }
+                },
+                {
+                  "If_1#Then": {
+                    "do": [
+                      {
+                        "Response_2": {
+                          "response": {},
+                          "markJobAsFailed": false,
+                          "then": "end",
+                          "export": {
+                            "as": "{ ...$context, outputs: { ...$context?.outputs, \"Response_2\": $output } }"
+                          },
+                          "metadata": {
+                            "activityType": "Response",
+                            "displayName": "Response",
+                            "fullName": "Response"
+                          }
+                        }
+                      }
+                    ],
+                    "then": "exit"
+                  }
+                },
+                {
+                  "If_1#Else": {
+                    "do": [
+                      {
+                        "Javascript_1": {
+                          "run": {
+                            "script": {
+                              "code": "",
+                              "language": "javascript",
+                              "arguments": "${{\n                        \"$context\": $context,\n                        \"$workflow\": $workflow,\n                        \"$input\": $input,\n                    }}"
+                            }
+                          },
+                          "export": {
+                            "as": "{ ...$context, outputs: { ...$context?.outputs, \"Javascript_1\": $output } }"
+                          },
+                          "metadata": {
+                            "activityType": "JsInvoke",
+                            "displayName": "Javascript",
+                            "fullName": "JsInvoke"
+                          }
+                        }
+                      }
+                    ],
+                    "then": "exit"
+                  }
+                }
+              ],
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"If_1\": $output } }"
+              },
+              "metadata": {
+                "activityType": "If",
+                "displayName": "If",
+                "fullName": "If"
+              }
+            }
+          },
+          {
+            "Javascript_2": {
+              "run": {
+                "script": {
+                  "code": "",
+                  "language": "javascript",
+                  "arguments": "${{\n                        \"$context\": $context,\n                        \"$workflow\": $workflow,\n                        \"$input\": $input,\n                    }}"
+                }
+              },
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"Javascript_2\": $output } }"
+              },
+              "metadata": {
+                "activityType": "JsInvoke",
+                "displayName": "Javascript 1",
+                "fullName": "JsInvoke"
+              }
+            }
+          }
+        ],
+        "metadata": {
+          "activityType": "Sequence",
+          "displayName": "Sequence",
+          "fullName": "Sequence",
+          "outputName": "sequence_1"
+        }
+      }
+    }
+  ],
+  "evaluate": {
+    "mode": "strict",
+    "language": "javascript"
+  }
+}

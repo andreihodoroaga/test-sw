@@ -1,0 +1,24 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "Connection",
+      "key": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+      "activityId": "get_user_repos",
+      "activityDisplayName": " rares repositories for the user \"andreihodoroaga\"",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "90a248a4-8a4d-4dce-8b21-58c8981bb026",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "UseConnectionService": "true",
+        "Connector": "uipath-microsoft-github",
+        "ActivityName": " rares repositories for the user \"andreihodoroaga\"",
+        "BindingsVersion": "2.2",
+        "SolutionsSupport": "true"
+      }
+    }
+  ]
+}

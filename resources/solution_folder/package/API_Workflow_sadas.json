@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "API Workflow sadas",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "68f5a1b9-84e2-4515-a267-64b93673b61c",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "API Workflow sadas",
+      "description": null
+    },
+    "locks": [],
+    "key": "838c5980-9446-48fc-8f9f-953990af1fd4"
+  }
+}
