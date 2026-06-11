@@ -138,6 +138,23 @@
                 "fullName": "JsInvoke"
               }
             }
+          },
+          {
+            "HTTP_Request_1": {
+              "with": {
+                "method": "GET",
+                "endpoint": "${\"\"}"
+              },
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"HTTP_Request_1\": { statusCode: $output?.statusCode,headers: $output?.headers,content: $output?.content,request: $output?.request } } }"
+              },
+              "call": "http",
+              "metadata": {
+                "activityType": "Http",
+                "displayName": "HTTP Request",
+                "fullName": "Http"
+              }
+            }
           }
         ],
         "metadata": {
