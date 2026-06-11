@@ -8,6 +8,7 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -17,7 +18,6 @@
       "name": "RPA Workflow"
     },
     "locks": [],
-    "key": "0ed7434a-f228-4edd-9dcf-c2828213dc3e",
-    "files": []
+    "key": "0ed7434a-f228-4edd-9dcf-c2828213dc3e"
   }
 }

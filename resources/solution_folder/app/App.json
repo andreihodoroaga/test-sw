@@ -17,6 +17,7 @@
       }
     ],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -33,7 +34,6 @@
       }
     },
     "locks": [],
-    "key": "d71eb04f-8b0b-4778-95f6-dffc7e3bd49e",
-    "files": []
+    "key": "d71eb04f-8b0b-4778-95f6-dffc7e3bd49e"
   }
 }

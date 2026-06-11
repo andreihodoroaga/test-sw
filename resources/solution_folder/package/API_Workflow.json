@@ -8,6 +8,7 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -17,7 +18,6 @@
       "name": "API Workflow"
     },
     "locks": [],
-    "key": "ba656273-bd59-4c7d-a1b6-c5ef3122324a",
-    "files": []
+    "key": "ba656273-bd59-4c7d-a1b6-c5ef3122324a"
   }
 }

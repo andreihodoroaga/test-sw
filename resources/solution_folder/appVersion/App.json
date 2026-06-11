@@ -8,6 +8,7 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -18,7 +19,6 @@
       "isAppPublic": false
     },
     "locks": [],
-    "key": "4d2ee80e-a98d-42db-821c-a6bda51cf80f",
-    "files": []
+    "key": "4d2ee80e-a98d-42db-821c-a6bda51cf80f"
   }
 }
